@@ -1,52 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/campoImagem"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_margin="@android:dimen/app_icon_size"/>
 
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textSize="10pt"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_horizontal"
         android:text="@string/mensgem_inicial" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RA" />
+        android:text="@string/usuario"
+        android:layout_marginHorizontal="10dp"/>
 
     <EditText
         android:id="@+id/campoUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="number" />
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:inputType="textEmailAddress"/>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Senha" />
+        android:layout_marginHorizontal="10dp"
+        android:text="@string/senha" />
 
     <EditText
         android:id="@+id/campoSenha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_marginHorizontal="10dp"
         android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/botaoLogin"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Entrar" />
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/botaoLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/login"
+            android:stateListAnimator="@null"/>
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+
+    </FrameLayout>
 
 
 </LinearLayout>

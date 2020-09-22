@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
 <!--    <item name="actionBarTheme">@style/MyActionBar</item>-->
     </style>
 
@@ -12,5 +13,19 @@
 <!--        <item name="colorControlNormal">#000000</item>-->
 <!--        <item name="titleTextColor">#000000</item>-->
 <!--    </style>-->
+
+    <style name="AppTheme.Toolbar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.Login" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+
+    </style>
+
 
 </resources>

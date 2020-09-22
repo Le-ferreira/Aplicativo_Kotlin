@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import kotlinx.android.synthetic.main.toolbar.*
 
 class TelaInicialActivity : DebugActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +16,9 @@ class TelaInicialActivity : DebugActivity() {
         val nome = args?.getString("nome_usuario")
         val numero = args?.getInt("numero")
         Toast.makeText(this, "Usuario: $nome", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Numero: $numero", Toast.LENGTH_LONG).show()
+
+        setSupportActionBar(toolbar_view)
 
         supportActionBar?.title= "Disciplinas"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -43,6 +47,6 @@ class TelaInicialActivity : DebugActivity() {
         else if (id == android.R.id.home) {
             finish()
         }
-        return super.onOptionsItemSelected(item)     
+        return super.onOptionsItemSelected(item)
     }
 }

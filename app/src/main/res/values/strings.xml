@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">LMSApp.v2</string>
-    <string name="mensgem_inicial">Bem Vindo</string>
+    <string name="mensgem_inicial">Agora a diversão vai começar !!</string>
     <string name="action_buscar">Buscar</string>
     <string name="action_atualizar">Atualizar</string>
     <string name="action_config">Configurações</string>
     <string name="action_exit">Sair</string>
+    <string name="usuario">RA</string>
+    <string name="senha">Senha</string>
+    <string name="login">Entrar</string>
 </resources>

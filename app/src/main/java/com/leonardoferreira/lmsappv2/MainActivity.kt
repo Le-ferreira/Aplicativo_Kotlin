@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import android.widget.RelativeLayout
+import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.login.*
 
 class MainActivity : DebugActivity  () {
@@ -12,14 +14,17 @@ class MainActivity : DebugActivity  () {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
-        campoImagem.setImageResource(R.drawable.icon_login)
+        campoImagem.setImageResource(R.drawable.ic_login)
+
 
         botaoLogin.setOnClickListener {
+
             val valorUsuario = campoUsuario.text.toString()
             val valorSenha = campoSenha.text.toString()
             //Toast.makeText(this, "Usuario: $valorUsuario; Senha: $valorSenha", Toast.LENGTH_LONG).show()
 
             var intent = Intent(this, TelaInicialActivity::class.java)
+
             var params = Bundle()
 
 //            params.putString("nome_usuario",valorUsuario)
