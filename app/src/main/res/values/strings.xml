@@ -5,7 +5,14 @@
     <string name="action_atualizar">Atualizar</string>
     <string name="action_config">Configurações</string>
     <string name="action_exit">Sair</string>
-    <string name="usuario">RA</string>
-    <string name="senha">Senha</string>
+    <string name="users">Nome</string>
+    <string name="password">Senha</string>
     <string name="login">Entrar</string>
+    <string name="first_name">Primeiro Nome</string>
+    <string name="last_name">Sobrenome</string>
+    <string name="email">Email</string>
+    <string name="createAccount">Increver-se</string>
+    <string name="register">Increver-se</string>
+    <string name="forgot_password">Esqueici minha Senha</string>
+
 </resources>
