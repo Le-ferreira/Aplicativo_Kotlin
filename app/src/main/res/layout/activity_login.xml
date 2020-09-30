@@ -61,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/button"
         android:stateListAnimator="@null"
         android:text="@string/register" />
 
@@ -84,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@color/colorPrimaryDark"
+            android:background="@drawable/button"
             android:stateListAnimator="@null"
             android:text="@string/login" />
 

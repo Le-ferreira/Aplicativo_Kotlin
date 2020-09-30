@@ -104,7 +104,7 @@ class CreateAccountActivity : AppCompatActivity() {
 
                 } else {
                     Log.w(TAG,"createUserWithEmail:Failure", task.exception)
-                    Toast.makeText(this@CreateAccountActivity, "A authenticação falhou.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@CreateAccountActivity, "Verifique se todas as informações foram preenchidas corretamente", Toast.LENGTH_SHORT).show()
                 }
             }
 
@@ -112,7 +112,7 @@ class CreateAccountActivity : AppCompatActivity() {
 
     private fun updateUserInfoandUi() {
         //Iniciar nova atividade
-        val intent = Intent (this@CreateAccountActivity, MainActivity::class.java)
+        val intent = Intent (this@CreateAccountActivity, TelaInicialActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }
