@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LMSApp.v2</string>
+    <string name="app_name">Panela</string>
     <string name="mensgem_inicial">Agora a diversão vai começar !!</string>
     <string name="action_buscar">Buscar</string>
     <string name="action_atualizar">Atualizar</string>
@@ -14,5 +14,14 @@
     <string name="createAccount">Increver-se</string>
     <string name="register">Increver-se</string>
     <string name="forgot_password">Esqueici minha Senha</string>
+    <string name="nav_disciplinas">disciplinas</string>
+    <string name="nav_mensagem">Mensagens</string>
+    <string name="nav_localizacao">Localização</string>
+    <string name="nav_configuracoes">Configurações</string>
+    <string name="nav_forum">Forum</string>
+    <string name="nav_abrir">" Abrir"</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="nome_usuario">Nome usuario</string>
 
 </resources>
