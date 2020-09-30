@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Panela</string>
-    <string name="mensgem_inicial">Agora a diversão vai começar !!</string>
+    <string name="mensgem_inicial">Bem Vindo !!</string>
     <string name="action_buscar">Buscar</string>
     <string name="action_atualizar">Atualizar</string>
     <string name="action_config">Configurações</string>
