@@ -1,27 +1,38 @@
 <resources>
-    <string name="app_name">Panela</string>
-    <string name="mensgem_inicial">Bem Vindo !!</string>
+    <string name="app_name">App Teste</string>
+
     <string name="action_buscar">Buscar</string>
     <string name="action_atualizar">Atualizar</string>
     <string name="action_config">Configurações</string>
     <string name="action_exit">Sair</string>
-    <string name="users">Nome</string>
+
+    <string name="email">Email</string>
     <string name="password">Senha</string>
-    <string name="login">Entrar</string>
     <string name="first_name">Primeiro Nome</string>
     <string name="last_name">Sobrenome</string>
-    <string name="email">Email</string>
-    <string name="createAccount">Increver-se</string>
-    <string name="register">Increver-se</string>
-    <string name="forgot_password">Esqueici minha Senha</string>
-    <string name="nav_disciplinas">disciplinas</string>
+    <string name="text_forgot">Redefinir senha </string>
+    <string name="text">Digite o e-mail associado à sua conta, e enviaremos um link para redefinir a sua senha</string>
+
+    <string name="login">Entrar</string>
+    <string name="createAccount">Registrar-se</string>
+    <string name="forgot_password">Esqueceu a senha ?</string>
+    <string name="nome_usuario">Nome usuario</string>
+    <string name="login_methods">OU</string>
+    <string name="New_user">Novo usuário ? Crie sua conta aqui !!</string>
+
+    <string name="nav_disciplinas">Disciplinas</string>
     <string name="nav_mensagem">Mensagens</string>
     <string name="nav_localizacao">Localização</string>
     <string name="nav_configuracoes">Configurações</string>
     <string name="nav_forum">Forum</string>
     <string name="nav_abrir">" Abrir"</string>
-    <string name="navigation_drawer_open">open</string>
-    <string name="navigation_drawer_close">close</string>
-    <string name="nome_usuario">Nome usuario</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+
+
+
+
+
+
 
 </resources>

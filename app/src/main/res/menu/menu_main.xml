@@ -5,11 +5,11 @@
         android:id="@+id/action_buscar"
         android:title="@string/action_buscar"
         app:showAsAction="always"
-        android:icon="@drawable/ic_buscar_white"/>
+        android:icon="@drawable/ic_search"/>
 
     <item
         android:id="@+id/action_atualizar"
-        android:icon="@drawable/ic_atualizar_white"
+        android:icon="@drawable/ic_refresh"
         android:title="@string/action_atualizar"
         app:showAsAction="never"/>
 

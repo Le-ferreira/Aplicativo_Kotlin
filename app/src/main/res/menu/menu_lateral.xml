@@ -4,18 +4,18 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_diciplinas"
-            android:icon="@drawable/ic_disciplina_black"
+            android:icon="@drawable/ic_chat"
             android:title="@string/nav_disciplinas"
             android:checked="true"
             />
         <item
             android:id="@+id/nav_forum"
-            android:icon="@drawable/ic_forum_black"
+            android:icon="@drawable/ic_chat"
             android:title="@string/nav_forum"
             />
         <item
             android:id="@+id/nav_mensagens"
-            android:icon="@drawable/ic_chat_black"
+            android:icon="@drawable/ic_chat"
             android:title="@string/nav_mensagem"
             />
         <item
@@ -25,7 +25,7 @@
             />
         <item
             android:id="@+id/nav_config"
-            android:icon="@drawable/ic_configuracoes_black"
+            android:icon="@drawable/ic_settings"
             android:title="@string/nav_configuracoes"
             />
     </group>
