@@ -12,8 +12,7 @@ import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.OAuthProvider
 import com.leonardoferreira.lmsappv2.R.id
-import kotlinx.android.synthetic.main.login_constraint.*
-import kotlinx.android.synthetic.main.login_constraint.view.*
+import kotlinx.android.synthetic.main.activity_login.*
 
 
 class LoginActivity: DebugActivity  () {
@@ -43,7 +42,7 @@ class LoginActivity: DebugActivity  () {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_constraint)
+        setContentView(R.layout.activity_login)
         mAuth = FirebaseAuth.getInstance()
 
 //        campoImagem.setImageResource(R.drawable.ic_login)

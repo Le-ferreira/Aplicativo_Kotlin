@@ -8,21 +8,21 @@ import android.text.TextUtils
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ProgressBar
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_create_account.*
 
 class CreateAccountActivity : AppCompatActivity() {
 
 
     // Elementos da interface do Usuario
 
-    private var etFistName: EditText? = null
-    private var etlasName: EditText? = null
-    private var etEmail: EditText? = null
-    private var etPassword: EditText? = null
+    private var etNameRegister: EditText? = null
+//    private var etlasName: EditText? = null
+    private var etEmailRegister: EditText? = null
+    private var etPasswordRegister: EditText? = null
     private var btnRegister: Button? = null
     private var mProgressBar: ProgressDialog? = null
 
@@ -36,10 +36,10 @@ class CreateAccountActivity : AppCompatActivity() {
 
     // Variaveis Globais
 
-    private var firstName: String? = null
+    private var nameRegister: String? = null
     private var lastName: String? = null
-    private var email: String? = null
-    private var password: String? = null
+    private var emailRegister: String? = null
+    private var passwordRegister: String? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,16 +49,15 @@ class CreateAccountActivity : AppCompatActivity() {
         initialise()
     }
     private fun initialise () {
-        etFistName = findViewById(R.id.et_first_name) as EditText
-        etlasName = findViewById(R.id.et_last_name) as EditText
-        etEmail = findViewById(R.id.et_email) as EditText
-        etPassword = findViewById(R.id.et_password) as EditText
-        btnRegister = findViewById(R.id.btn_register) as Button
+        etNameRegister = findViewById<EditText>(R.id.et_nameRegister)
+        etEmailRegister = findViewById<EditText>(R.id.et_emailRegister)
+        etPasswordRegister = findViewById<EditText>(R.id.et_passwordRegister)
+        btnRegister = findViewById<Button>(R.id.btn_register)
         mProgressBar = ProgressDialog (this)
 
 
         mDatabase = FirebaseDatabase.getInstance()
-        mdataReference = mDatabase!!.reference!!.child("Users")
+        mdataReference = mDatabase!!.reference.child("Users")
         mAuth = FirebaseAuth.getInstance()
 
         btnRegister!!.setOnClickListener{ CreateAccount() }
@@ -66,12 +65,13 @@ class CreateAccountActivity : AppCompatActivity() {
 
     private fun CreateAccount () {
 
-        firstName = etFistName?.text.toString()
-        lastName = etlasName?.text.toString()
-        email = etEmail?.text.toString()
-        password = etPassword?.text.toString()
+        nameRegister = etNameRegister?.text.toString()
+        emailRegister = etEmailRegister?.text.toString()
+        passwordRegister = etPasswordRegister?.text.toString()
 
-        if (!TextUtils.isEmpty(firstName) && !TextUtils.isEmpty(lastName) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
+        if (!TextUtils.isEmpty(nameRegister)
+            && !TextUtils.isEmpty(emailRegister)
+            && !TextUtils.isEmpty(passwordRegister)) {
 
             Toast.makeText(this, "Informações preenchidas corretamente", Toast.LENGTH_SHORT).show()
 
@@ -83,7 +83,7 @@ class CreateAccountActivity : AppCompatActivity() {
         mProgressBar!!.show()
 
         mAuth!!
-            .createUserWithEmailAndPassword(email!!, password!!). addOnCompleteListener(this) { task ->
+            .createUserWithEmailAndPassword(emailRegister!!, passwordRegister!!). addOnCompleteListener(this) { task ->
                 mProgressBar!!.hide()
 
                 if (task.isSuccessful){
@@ -96,7 +96,7 @@ class CreateAccountActivity : AppCompatActivity() {
                     verifyEmail ()
 
                     val currenUserDb = mdataReference!!.child(userId)
-                    currenUserDb.child("fistName").setValue(firstName)
+                    currenUserDb.child("fistName").setValue(nameRegister)
                     currenUserDb.child("lastName").setValue(lastName)
 
                     // Atualizar as informações no banco de dados
