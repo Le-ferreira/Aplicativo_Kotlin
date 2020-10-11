@@ -12,7 +12,6 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_create_account.*
 
 class CreateAccountActivity : AppCompatActivity() {
 
@@ -37,7 +36,6 @@ class CreateAccountActivity : AppCompatActivity() {
     // Variaveis Globais
 
     private var nameRegister: String? = null
-    private var lastName: String? = null
     private var emailRegister: String? = null
     private var passwordRegister: String? = null
 
@@ -97,7 +95,6 @@ class CreateAccountActivity : AppCompatActivity() {
 
                     val currenUserDb = mdataReference!!.child(userId)
                     currenUserDb.child("fistName").setValue(nameRegister)
-                    currenUserDb.child("lastName").setValue(lastName)
 
                     // Atualizar as informações no banco de dados
                     updateUserInfoandUi()
@@ -112,7 +109,7 @@ class CreateAccountActivity : AppCompatActivity() {
 
     private fun updateUserInfoandUi() {
         //Iniciar nova atividade
-        val intent = Intent (this@CreateAccountActivity, TelaInicialActivity::class.java)
+        val intent = Intent (this@CreateAccountActivity, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }

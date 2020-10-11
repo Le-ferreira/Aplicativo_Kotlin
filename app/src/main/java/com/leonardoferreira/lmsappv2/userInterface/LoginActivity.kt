@@ -99,7 +99,7 @@ class LoginActivity: DebugActivity  () {
 
         if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
             mProgressBar!!.setMessage("Verificando usuario")
-            mProgressBar!!.show()
+//            mProgressBar!!.show()
 
             Log.d(TAG, "Login do usuario $email, $password")
 
@@ -149,7 +149,7 @@ class LoginActivity: DebugActivity  () {
     }
 
     private fun updateUI() {
-        val intent = Intent(this, TelaInicialActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         this.finish()
     }

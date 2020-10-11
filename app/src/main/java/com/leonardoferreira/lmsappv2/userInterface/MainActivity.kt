@@ -1,5 +1,6 @@
 package com.leonardoferreira.lmsappv2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -7,22 +8,48 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.activity_tela_inicial.*
+import com.leonardoferreira.lmsappv2.userInterface.DisciplinaActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
 
-class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : DebugActivity(), NavigationView.OnNavigationItemSelectedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tela_inicial)
+        setContentView(R.layout.activity_main)
 
         setSupportActionBar(toolbar_view)
 
         supportActionBar?.title= "Menu"
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         configuraMenuLateral()
+
+        recyclerDisciplinas?.layoutManager = LinearLayoutManager(this)
+        recyclerDisciplinas?.itemAnimator = DefaultItemAnimator()
+        recyclerDisciplinas?.setHasFixedSize(true)
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        taskDisciplinas()
+    }
+    var disciplina = listOf<Disciplina>()
+
+    fun taskDisciplinas(){
+        this.disciplina = DisciplinaService.getDisciplina()
+        recyclerDisciplinas?.adapter = DisciplinasAdapter(this.disciplina) {onClickDisciplina (it)}
+    }
+
+    fun onClickDisciplina(disciplina: Disciplina) {
+
+        val intent = Intent(this, DisciplinaActivity::class.java)
+        intent.putExtra("disciplina", disciplina)
+        startActivity(intent)
+        this.finish()
+
     }
 
     private fun configuraMenuLateral() {
