@@ -6,7 +6,9 @@
         android:id="@+id/action_buscar"
         android:icon="@drawable/ic_search"
         android:title="@string/action_buscar"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+
     <item
         android:id="@+id/action_atualizar"
         android:icon="@drawable/ic_refresh"
@@ -23,5 +25,4 @@
         android:title="@string/action_exit"
         app:showAsAction="never"
         />
-
 </menu>

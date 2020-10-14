@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".userInterface.DisciplinaActivity">
-
+    tools:context=".ui.DisciplinaActivity">
     <include layout="@layout/toolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

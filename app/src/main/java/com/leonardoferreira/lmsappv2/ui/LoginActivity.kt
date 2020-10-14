@@ -91,7 +91,6 @@ class LoginActivity: DebugActivity  () {
             loginUser()
         }
     }
-
     private fun loginUser() {
         email = etEmail?.text.toString()
         password = etPassword?.text.toString()

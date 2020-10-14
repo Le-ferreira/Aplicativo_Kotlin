@@ -24,11 +24,14 @@
     <string name="nav_disciplinas">Disciplinas</string>
     <string name="nav_mensagem">Mensagens</string>
     <string name="nav_localizacao">Localização</string>
-    <string name="nav_configuracoes">Configurações</string>
-    <string name="nav_forum">Forum</string>
-    <string name="nav_abrir">" Abrir"</string>
+    <string name="nav_favoritos">Favoritos</string>
+    <string name="nav_menu">"Menu"</string>
+    <string name="nav_sair">"Sair"</string>
     <string name="navigation_drawer_open">Open</string>
     <string name="navigation_drawer_close">Close</string>
+
+    <string name="repositorio">Repositório</string>
+    <string name="title_menu">Menu</string>
 
 
 </resources>
